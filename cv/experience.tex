@@ -1,0 +1,121 @@
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Experience}
+
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {IMU Biosciences}
+    {Senior Software Engineer}
+    {UK} % Location
+    {Feb 2024 - Current} % Date(s)
+    {
+    \begin{cvitems}
+        \item {Architected a \textbf{data catalogue and discovery layer} for 100k+ Flow Cytometry samples, unifying scattered Parquet and WSP sources into a structured hierarchy with lineage-aware indexing. This enabled faster query performance and reproducible ML training datasets.}
+        \item {Designed and deployed \textbf{hierarchical gating tree ontologies}, linking semantic labels with raw gating dimensions. This standardisation streamlined cell population tagging, automated QC, and improved interpretability of ML models across diverse panels.}
+        \item {Introduced \textbf{Zarr- and Parquet-based storage strategies} for single-cell intensity data, benchmarking access patterns across S3 and Snowflake. Delivered a hybrid design balancing whole-sample retrieval with cross-sample aggregation for model training.}
+        \item {Developed a \textbf{synthetic data generation framework} for Flow Cytometry, layering immune lineage trees with activation states to produce realistic marker distributions. Used for stress-testing pipelines and validating ML model generalisation.}
+        \item {Implemented a \textbf{QC and monitoring framework} in Dagster that automatically validates staining consistency across donor "cone" reference samples, ensuring reproducibility and flagging anomalies in experimental workflows.}
+        \item {Partnered with immunologists to embed \textbf{computational QC and metadata standards} (e.g. lineage, phenotype, activation states) directly into pipeline outputs, bridging experimental and computational perspectives.}
+    \end{cvitems}
+    }
+  \cventry
+    {Mobkoi}
+    {Senior Data Engineer}
+    {UK} % Location
+    {Jan 2022 - Oct 2023} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Introduced \textbf{Infrastructure as Code across the organisation}, migrating all source code to GitHub with version control. Established clear visibility into data processing workflows and deployment practices.}
+        \item {Rebuilt the company's data pipelines from \textbf{ad-hoc cloud functions to Prefect orchestration} on GCP. Implemented CI/CD processes that increased deployment speed and safety whilst reducing operational overhead.}
+        \item {Led migration from aggregated partner data to \textbf{impression-level data ingestion}, interfacing with AWS ad-serving infrastructure and extracting large volumes from CloudWatch logs. Enabled more granular analytics and increased client confidence.}
+        \item {Designed and implemented a \textbf{new data warehouse} with well-modelled internal operational systems. Created robust change data capture processes that improved data freshness and reliability for the analytics team.}
+        \item {Overhauled revenue estimation processes with \textbf{improved FX handling}, reducing monthly variance against P\&L from \textasciitilde 20\% to <1\%. Significantly improved financial forecasting accuracy.}
+    \end{cvitems}
+    }
+  \cventry
+    {TransitionZero}
+    {Senior Data Engineer}
+    {UK} % Location
+    {Jan 2021 - March 2021} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Implemented \textbf{Infrastructure as Code using Terraform on GCP}, establishing revision-based deployment workflows that minimised costs from wasted compute and cloud resources.}
+        \item {Replaced Cloud Composer with \textbf{Prefect pipelines}, providing analysts with greater flexibility and control over data transformations whilst reducing operational complexity.}
+        \item {Built a \textbf{CI-based framework} enabling analysts to create and deploy data pipelines independently, accelerating delivery and reducing engineering bottlenecks.}
+        \item {Developed satellite imagery processing pipelines using \textbf{Google Earth Engine} for vision-based ML models supporting climate analytics.}
+      \end{cvitems}
+    }
+  \cventry
+    {HeyJobs}
+    {Senior Data Engineer}
+    {Berlin} % Location
+    {Aug 2019 - Nov 2020} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Built a \textbf{QA tool for Redshift data warehouse} implementing property-based testing of SQL transformations to validate business invariants. Integrated with Airflow pipelines, DataDog monitoring, and Slack alerts as part of CI process, significantly reducing post-deployment issues.}
+        \item {Tech lead and architect for redesigning \textbf{cost processing infrastructure}, migrating from legacy undocumented SQL to functional Python with full unit test coverage. Reduced marketing overspend by \textasciitilde 5\% (hundreds of euros daily savings).}
+        \item {Implemented \textbf{Airflow best practices} with fully incremental, idempotent, and deterministic pipelines. Leveraged AWS Glue catalogue and Spectrum for cost-effective storage, reducing reliance on expensive Redshift for intermediary data.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Stiftelsen Flowminder (Flowminder Foundation)}
+    {Data Analyst/Engineer}
+    {Southampton \& Berlin (remote)} % Location
+    {Jun 2017 - Jun 2019} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {\textbf{Inter-American Development Bank}: Led project estimating commuting flows and road usage in Haiti's two largest cities using 3 years of mobile phone location data (~10 million subscribers). Built interactive dashboards with PostGIS and React for the Haitian transport ministry.}
+        \item {\textbf{Nepal National Statistics Office}: Designed and delivered a two-week training programme on Python, R, and mobile phone data analysis for government statisticians. Deployed JupyterHub learning environment on GKE for hands-on exercises.}
+        \item {\textbf{GSMA Disaster Response Innovation Fund}: Led project end-to-end including budgets and contractor management. Standardised Flowminder's \textbf{ETL processes using Airflow} across multiple countries, ingesting ~50+ million daily mobile phone records. Built post-crisis mobility analysis tool using Kafka and TimescaleDB for humanitarian aid targeting.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {University of Southampton} % Organization
+    {Ph.D. student - Computational Modelling} % Job title
+    {Southampton UK} % Location
+    {Sep 2015 - Jun 2017} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Investigated \textbf{deep learning, classical optimisation, and Bayesian approaches} to non-linear inverse problems in x-ray tomography. Focused on reducing reconstruction artefacts using TensorFlow, PyMC3, and parallel computing (OpenMP/MPI) on HPC infrastructure.}
+        \item {Taught undergraduate courses in Python programming, Linear Algebra, and Calculus. Delivered postgraduate training in parallel programming, advanced Python, and research software engineering best practices (CI, testing).}
+        \item {Completed three-month internship with Flowminder, received permanent position offer, and withdrew from Ph.D. programme to pursue applied data engineering.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Buxton Community School} % Organization
+    {High School Mathematics Teacher} % Job title
+    {Buxton UK} % Location
+    {Sep 2013 - Sep 2014} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Taught Mathematics and ICT to students aged 11-18, including GCSE and A-Level examination classes. Led after-school programme introducing talented mathematics students (ages 16-18) to numerical methods in Python.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+  \cventry
+    {Manchester Metropolitan University} % Organization
+    {Research Assistant} % Job title
+    {Manchester UK} % Location
+    {June 2012 - Sep 2012} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Built a \textbf{GUI tool for automated solution of large differential equation systems} in astrochemistry using Fortran, C++, and QT. Implemented text parsing and matrix reordering methods (LAPACK) to improve solution efficiency.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+\end{cventries}

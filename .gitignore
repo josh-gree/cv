@@ -1,0 +1,9 @@
+# LaTeX auxiliary files
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+
+# Compiled PDF (uncomment if you don't want to commit the PDF)
+# cv.pdf
