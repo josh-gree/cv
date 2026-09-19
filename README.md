@@ -9,6 +9,7 @@ Professional CV built with the Awesome CV LaTeX template.
 ├── cv.tex              # Main CV file
 ├── awesome-cv.cls      # LaTeX class file
 ├── cv/                 # Content sections
+│   ├── summary.tex     # Professional summary
 │   ├── experience.tex  # Work experience
 │   ├── education.tex   # Education history
 │   └── skills.tex      # Technical skills
