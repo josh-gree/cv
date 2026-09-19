@@ -1,0 +1,29 @@
+%-------------------------------------------------------------------------------
+%	SECTION TITLE
+%-------------------------------------------------------------------------------
+\cvsection{Projects}
+
+
+%-------------------------------------------------------------------------------
+%	CONTENT
+%-------------------------------------------------------------------------------
+\begin{cventries}
+
+%---------------------------------------------------------
+  \cventry
+    {Selected personal ML \& LLM projects, open source at github.com/josh-gree}
+    {}
+    {} % Location
+    {2023 -- 2026} % Date(s)
+    {
+      \begin{cvitems}
+        \item {\textbf{probe-lab}: toolkit for LLM activation probing. Extracts per-layer residual-stream activations with PyTorch and Hugging Face Transformers and fits linear probes against prompt metadata for interpretability experiments.}
+        \item {\textbf{weight-corruption}: experimental framework measuring how weight perturbations (noise, zeroing, shuffling, quantisation) degrade language modelling and behaviour across the Pythia model family, with GPU evaluation on Modal.}
+        \item {\textbf{birdclef-2026} and \textbf{wm}: bird-audio classification in PyTorch (timm, ONNX embeddings) trained on Modal GPUs with Weights \& Biases tracking; wrote \texttt{wm}, a small framework that snapshots every experiment run as a PR for reproducibility.}
+        \item {\textbf{news-knowledge-graph}: LLM extraction pipeline turning news articles into a knowledge graph using DSPy programs and GLiNER2 for entity extraction, temporal tagging and Wikidata entity linking, orchestrated with Prefect.}
+        \item {\textbf{mobile-agents}: GitHub Actions workflow built on the Claude Agent SDK that plans and implements issues autonomously and opens pull requests. Earlier: RAG-style semantic search over news with DistilBERT embeddings in Postgres/pgvector.}
+      \end{cvitems}
+    }
+
+%---------------------------------------------------------
+\end{cventries}
