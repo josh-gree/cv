@@ -34,7 +34,7 @@ def main(argv: list[str]) -> int:
     text = extract(pdf)
     missing = []
     for term in terms:
-        n = len(re.findall(r"(?<![A-Za-z])" + re.escape(term) + r"(?![A-Za-z])", text, re.I))
+        n = len(re.findall(r"(?<![A-Za-z])" + re.escape(term) + r"s?(?![A-Za-z])", text, re.I))
         print(f"{n:3d}  {term}")
         if n == 0:
             missing.append(term)
