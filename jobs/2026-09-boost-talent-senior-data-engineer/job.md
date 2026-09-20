@@ -79,16 +79,16 @@ Terms from the advert, checked against the base CV. Only claim what you would de
 | Glue | yes (HeyJobs Glue/Spectrum) | AWS row |
 | S3 | yes | summary and AWS row |
 | serverless architectures | yes (Lambda, GCP Cloud Functions) | AWS row, literal phrase |
-| Step Functions | no | not claimed: no evidence |
-| Athena | no | not claimed: no evidence (Redshift Spectrum is the nearest real experience) |
+| Step Functions | no in base; confirmed by user | AWS row |
+| Athena | no in base; confirmed by user | AWS row |
 | dbt | yes (base skills row) | Pipelines row and summary |
 | data modelling | yes | summary and Pipelines row |
 | orchestration | yes (Dagster, Prefect, Airflow) | summary and Pipelines row name |
 | Parquet | yes (IMU, lakehouse) | summary and Storage row |
-| Iceberg | no | not claimed: no evidence |
+| Iceberg | no (user knows the format but has not used it) | not claimed |
 | data ingestion | yes (Mobkoi impression-level ingestion, Flowminder 50M records/day) | Pipelines row |
 | data quality frameworks | yes (HeyJobs, IMU QC framework) | literal phrase in Data Quality row; "data quality" in summary |
-| schema evolution | no | not claimed: no evidence |
+| schema evolution | no literal term; confirmed by user (every role touching a database) | Data Quality row |
 | metadata management | yes (IMU ontologies and metadata standards) | "metadata" in summary, "metadata standards" in skills |
 | governance | partial (metadata standards and ontologies defined with domain experts) | "governance" in Data Quality row |
 | distributed data processing | yes (PySpark, EMR, Kafka) | literal phrase in Streaming \& Distributed row |
@@ -101,7 +101,7 @@ Terms from the advert, checked against the base CV. Only claim what you would de
 | production data platforms | yes | "operational support for production data platforms" in skills |
 | event-driven architectures, messaging, streaming | yes (Kafka, CDC, cloud functions) | Streaming \& Distributed row |
 | OpenSearch | no | not claimed: no evidence |
-| graph databases | no | not claimed: no evidence |
+| graph databases | no in base; user used Neo4j at Flowminder | "Neo4j (graph database)" in Storage row |
 | knowledge graph | yes (news-knowledge-graph project) | "knowledge graphs" in ML row; project already in Projects |
 | data discovery, catalogue, lineage | yes (IMU catalogue, lineage-aware index) | "data catalogue, lineage" in Data Quality row |
 | backend services using Python | yes (Flask, location backend on GCP) | "Python backend services" in skills |
