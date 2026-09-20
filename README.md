@@ -4,8 +4,8 @@ Professional CV built with the Awesome CV LaTeX template.
 
 Two PDFs are built from the same content files:
 
-- `cv.pdf` - styled version for people to read.
-- `cv-plain.pdf` - plain single-column version for job-portal uploads.
+- `cv.pdf` - styled version for people to read. Served at https://josh-gree.github.io/cv
+- `cv-plain.pdf` - plain single-column version for job-portal uploads. Served at https://josh-gree.github.io/cv/plain
   No tables, icons, small caps or footer, so applicant tracking systems parse it cleanly.
 
 ## Structure
