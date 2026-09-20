@@ -60,9 +60,18 @@
 
 
 %-------------------------------------------------------------------------------
+%	JOB-SPECIFIC VARIANTS
+%	Build with `make job JOB=<name>`; the Makefile defines \cvjob before
+%	inputting this file. Each section is taken from jobs/<name>/<section>.tex
+%	when that file exists, otherwise from cv/<section>.tex.
+%-------------------------------------------------------------------------------
+\input{cv/jobsupport.tex}
+
+%-------------------------------------------------------------------------------
 %	PERSONAL INFORMATION (shared with cv-plain.tex)
 %-------------------------------------------------------------------------------
 \input{cv/personal.tex}
+\cvjoboverrides
 
 %-------------------------------------------------------------------------------
 \begin{document}
@@ -83,11 +92,11 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
-\input{cv/summary.tex}
-\input{cv/experience.tex}
-\input{cv/projects.tex}
-\input{cv/skills.tex}
-\input{cv/education.tex}
+\cvinput{summary}
+\cvinput{experience}
+\cvinput{projects}
+\cvinput{skills}
+\cvinput{education}
 
 
 %-------------------------------------------------------------------------------

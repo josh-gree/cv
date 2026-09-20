@@ -8,6 +8,26 @@ Two PDFs are built from the same content files:
 - `cv-plain.pdf` - plain single-column version for job-portal uploads. Served at https://josh-gree.github.io/cv/plain
   No tables, icons, small caps or footer, so applicant tracking systems parse it cleanly.
 
+## Job-specific versions
+
+Each application gets a folder under `jobs/` holding the advert, a gap analysis
+and only the files that differ from the base CV. Both builds read
+`jobs/<name>/<section>.tex` when it exists and fall back to `cv/<section>.tex`.
+
+```bash
+cp -r jobs/_template jobs/2026-09-acme-senior-data-engineer
+# edit job.md, overrides.tex, summary.tex (and skills.tex if needed)
+make job JOB=2026-09-acme-senior-data-engineer
+# -> jobs/2026-09-acme-senior-data-engineer/cv.pdf and cv-plain.pdf
+```
+
+`make jobs` rebuilds every variant. Job PDFs are committed but not linked from
+the GitHub Pages site. `scripts/check_keywords.py <pdf> <term>...` counts how
+often each advert term appears in the plain PDF.
+
+In Claude Code, the repo-local `tailor-cv` skill runs this whole process:
+paste an advert and ask for a tailored version.
+
 ## Structure
 
 ```
@@ -16,6 +36,7 @@ Two PDFs are built from the same content files:
 ├── cv-plain.tex        # Plain ATS-friendly CV, same content
 ├── awesome-cv.cls      # LaTeX class file
 ├── cv/                 # Content sections shared by both
+│   ├── jobsupport.tex  # Job-variant lookup macros
 │   ├── personal.tex    # Name and contact details
 │   ├── summary.tex     # Professional summary
 │   ├── experience.tex  # Work experience
@@ -23,6 +44,9 @@ Two PDFs are built from the same content files:
 │   └── skills.tex      # Technical skills
 ├── cv.pdf              # Compiled styled CV
 ├── cv-plain.pdf        # Compiled plain CV
+├── jobs/               # One folder per application (see above)
+│   ├── _template/      # Copy this to start a new one
+│   └── <name>/         # job.md, overrides.tex, summary.tex, skills.tex, PDFs
 └── Makefile            # Build automation
 ```
 
