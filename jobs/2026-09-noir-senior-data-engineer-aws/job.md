@@ -31,7 +31,7 @@ Location: Manchester (hybrid). Salary: £60k - £80k + Pension + Benefits.
 | Python, SQL | yes | unchanged |
 | Pipeline Orchestration | yes (Airflow, Prefect, Dagster) | literal phrase used as skills row name and in summary |
 | data warehousing | yes ("data warehouse") | literal phrase added to skills row name |
-| data lakehouse | partial (Parquet on S3 + Snowflake at IMU) | described as "Parquet data lakes on S3" plus warehousing; "lakehouse" itself not claimed |
+| data lakehouse | yes (Parquet on S3 + Snowflake at IMU) | "lakehouse architectures" in summary, "data lakehouse" in skills |
 | data architecture | yes (storage architecture, warehouse design) | literal phrase in summary and skills row name |
 | real-time data | yes (Kafka, TimescaleDB) | "real-time ingestion with Kafka" in summary |
 | data integrations | yes (Mobkoi) | "integrating third-party platforms" in summary |
@@ -39,7 +39,7 @@ Location: Manchester (hybrid). Salary: £60k - £80k + Pension + Benefits.
 | data quality and integrity | yes | in summary and skills |
 | technical guidance to juniors | yes (tech lead, teaching, mentoring) | "mentoring engineers" in summary |
 | non-technical stakeholders | yes (immunologists, ministry, analysts) | in summary |
-| Agile | unknown | not claimed until confirmed |
+| Agile | yes | "Agile delivery" in summary, "Agile" in skills |
 
 ## Overrides in this folder
 
