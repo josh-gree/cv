@@ -26,8 +26,8 @@ Location: Manchester (hybrid). Salary: £60k - £80k + Pension + Benefits.
 | Senior Data Engineer | yes (3 roles) | headline set to "Senior Data Engineer" in overrides.tex |
 | ETL | yes | "ETL" in summary and skills row name |
 | AWS Glue, S3, Redshift | yes | AWS given its own skills row, listed first |
-| AWS Lambda | no evidence | not claimed. Add if you have used it. |
-| Amazon EMR, PySpark | no evidence | not claimed. Add if you have used them. |
+| AWS Lambda | yes (used across roles) | AWS skills row |
+| Amazon EMR, PySpark | yes (used across roles) | AWS and Languages skills rows |
 | Python, SQL | yes | unchanged |
 | Pipeline Orchestration | yes (Airflow, Prefect, Dagster) | literal phrase used as skills row name and in summary |
 | data warehousing | yes ("data warehouse") | literal phrase added to skills row name |
