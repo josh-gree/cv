@@ -1,0 +1,23 @@
+%-------------------------------------------------------------------------------
+%	JOB-SPECIFIC VARIANT SUPPORT
+%	Shared by cv.tex and cv-plain.tex.
+%
+%	\cvjob            name of the job folder under jobs/, or empty for the base CV.
+%	                  The Makefile defines it on the command line.
+%	\cvinput{name}    inputs jobs/\cvjob/name.tex if it exists, else cv/name.tex.
+%	\cvjoboverrides   inputs jobs/\cvjob/overrides.tex if it exists. Use it to
+%	                  change the headline (\position) or other personal fields.
+%-------------------------------------------------------------------------------
+\providecommand*{\cvjob}{}
+
+\newcommand*{\cvinput}[1]{%
+  \IfFileExists{jobs/\cvjob/#1.tex}%
+    {\input{jobs/\cvjob/#1.tex}}%
+    {\input{cv/#1.tex}}%
+}
+
+\newcommand*{\cvjoboverrides}{%
+  \IfFileExists{jobs/\cvjob/overrides.tex}%
+    {\input{jobs/\cvjob/overrides.tex}}%
+    {}%
+}

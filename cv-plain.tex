@@ -82,14 +82,16 @@
 \newenvironment{cvskills}{\begin{itemize}[label={}, leftmargin=0pt]}{\end{itemize}}
 \newcommand*{\cvskill}[2]{\item {\bfseries #1:} #2}
 
-% Shared personal information
+% Job-specific variants (see cv/jobsupport.tex) and shared personal information
+\input{cv/jobsupport.tex}
 \input{cv/personal.tex}
+\cvjoboverrides
 
 \begin{document}
 \makecvheader
-\input{cv/summary.tex}
-\input{cv/experience.tex}
-\input{cv/projects.tex}
-\input{cv/skills.tex}
-\input{cv/education.tex}
+\cvinput{summary}
+\cvinput{experience}
+\cvinput{projects}
+\cvinput{skills}
+\cvinput{education}
 \end{document}
