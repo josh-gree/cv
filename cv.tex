@@ -44,22 +44,25 @@
 % If you would like to change the social information separator from a pipe (|) to something else
 \renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
 
+% Give the skills table a wider category column than the class default (10%)
+% so multi-word categories do not overflow the page.
+\renewenvironment{cvskills}{%
+  \vspace{\acvSectionContentTopSkip}
+  \vspace{-2.0mm}
+  \begin{center}
+    \setlength\tabcolsep{1ex}
+    \setlength{\extrarowheight}{0pt}
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.74}}}
+}{%
+    \end{tabular*}
+  \end{center}
+}
+
 
 %-------------------------------------------------------------------------------
-%	PERSONAL INFORMATION
-%	Comment any of the lines below if they are not required
+%	PERSONAL INFORMATION (shared with cv-plain.tex)
 %-------------------------------------------------------------------------------
-% Available options: circle|rectangle,edge/noedge,left/right
-% \photo{./examples/profile.png}
-\name{Joshua}{Greenhalgh}
-% \position{}
-% \address{}
-
-\email{joshuadouglasgreenhalgh@gmail.com}
-\github{josh-gree}
-% \linkedin{linkedin-id}
-% \homepage{www.homepage.com}
-% \mobile{(+44) xxx-xxxx}
+\input{cv/personal.tex}
 
 %-------------------------------------------------------------------------------
 \begin{document}
@@ -80,10 +83,11 @@
 %	CV/RESUME CONTENT
 %	Each section is imported separately, open each file in turn to modify content
 %-------------------------------------------------------------------------------
+\input{cv/summary.tex}
 \input{cv/experience.tex}
-\newpage
-\input{cv/education.tex}
+\input{cv/projects.tex}
 \input{cv/skills.tex}
+\input{cv/education.tex}
 
 
 %-------------------------------------------------------------------------------
