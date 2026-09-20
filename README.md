@@ -2,24 +2,33 @@
 
 Professional CV built with the Awesome CV LaTeX template.
 
+Two PDFs are built from the same content files:
+
+- `cv.pdf` - styled version for people to read.
+- `cv-plain.pdf` - plain single-column version for job-portal uploads.
+  No tables, icons, small caps or footer, so applicant tracking systems parse it cleanly.
+
 ## Structure
 
 ```
 .
-├── cv.tex              # Main CV file
+├── cv.tex              # Styled CV (Awesome CV)
+├── cv-plain.tex        # Plain ATS-friendly CV, same content
 ├── awesome-cv.cls      # LaTeX class file
-├── cv/                 # Content sections
+├── cv/                 # Content sections shared by both
+│   ├── personal.tex    # Name and contact details
 │   ├── summary.tex     # Professional summary
 │   ├── experience.tex  # Work experience
 │   ├── education.tex   # Education history
 │   └── skills.tex      # Technical skills
-├── cv.pdf              # Compiled CV
+├── cv.pdf              # Compiled styled CV
+├── cv-plain.pdf        # Compiled plain CV
 └── Makefile            # Build automation
 ```
 
 ## Building
 
-### Compile the CV
+### Compile both CVs
 ```bash
 make
 ```
@@ -29,7 +38,7 @@ make
 make clean
 ```
 
-### Clean everything (including PDF)
+### Clean everything (including PDFs)
 ```bash
 make cleanall
 ```

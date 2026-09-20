@@ -1,0 +1,95 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+%
+% ATS-friendly variant of the CV. Reads exactly the same content files as
+% cv.tex but renders them with plain single-column formatting: no tables,
+% no icons, no small caps, no header/footer, left-aligned text, one font.
+% Use this one for job-portal uploads; use cv.pdf for humans.
+%
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=1.8cm]{geometry}
+\usepackage{fontspec}
+\usepackage{roboto}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{enumitem}
+\usepackage{etoolbox}
+\usepackage{parskip}
+\usepackage{needspace}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\raggedright
+% No hyphenation: a word split across lines is a word an ATS cannot match.
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlist[itemize]{leftmargin=1.2em, nosep, itemsep=1pt, label=\textbullet}
+
+%---------------------------------------------------------------------------
+% Personal-information commands: same names as awesome-cv, store the values.
+%---------------------------------------------------------------------------
+\makeatletter
+\newcommand*{\name}[2]{\def\@firstname{#1}\def\@lastname{#2}}
+\newcommand*{\position}[1]{\def\@position{#1}}
+\newcommand*{\address}[1]{\def\@address{#1}}
+\newcommand*{\email}[1]{\def\@email{#1}}
+\newcommand*{\github}[1]{\def\@github{#1}}
+\newcommand*{\mobile}[1]{\def\@mobile{#1}}
+\newcommand*{\linkedin}[1]{\def\@linkedin{#1}}
+\newcommand*{\homepage}[1]{\def\@homepage{#1}}
+
+\newcommand*{\makecvheader}{%
+  {\LARGE\bfseries \@firstname\ \@lastname\par}
+  {\large \@position\par}
+  \@address\par
+  \@mobile\ \textbar\ \@email\ \textbar\ github.com/\@github\par
+  \vspace{1.5ex}
+}
+\makeatother
+
+%---------------------------------------------------------------------------
+% Content macros with the same signatures as awesome-cv.
+%---------------------------------------------------------------------------
+\newcommand*{\cvsection}[1]{%
+  \Needspace*{10\baselineskip}%
+  \vspace{1.5ex}
+  {\large\bfseries #1\par}
+  \vspace{0.5ex}\hrule\vspace{1ex}
+}
+
+\newenvironment{cventries}{}{}
+
+% \cventry{<organisation>}{<title>}{<location>}{<date>}{<description>}
+% Two-line entries print "Title" then "Organisation, Location, Date";
+% entries with empty title and location print one line.
+\newcommand*{\cventry}[5]{%
+  \Needspace*{5\baselineskip}%
+  \ifblank{#2#3}{%
+    {\bfseries #1} (#4)\par
+  }{%
+    {\bfseries #2}\par
+    #1\ifblank{#3}{}{, #3}, #4\par
+  }%
+  \ifblank{#5}{}{#5}%
+  \vspace{1.2ex}
+}
+
+\newenvironment{cvitems}{\begin{itemize}}{\end{itemize}}
+\newenvironment{cvparagraph}{}{}
+
+\newenvironment{cvskills}{\begin{itemize}[label={}, leftmargin=0pt]}{\end{itemize}}
+\newcommand*{\cvskill}[2]{\item {\bfseries #1:} #2}
+
+% Shared personal information
+\input{cv/personal.tex}
+
+\begin{document}
+\makecvheader
+\input{cv/summary.tex}
+\input{cv/experience.tex}
+\input{cv/projects.tex}
+\input{cv/skills.tex}
+\input{cv/education.tex}
+\end{document}
