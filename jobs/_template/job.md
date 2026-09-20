@@ -2,8 +2,6 @@
 
 - **Source:** <link or "sent by recruiter">
 - **Location / salary:** <as advertised>
-- **Applied:** <date, or blank>
-- **CV sent:** jobs/<this folder>/cv-plain.pdf (portal) or cv.pdf (email)
 
 ## Advert
 

@@ -2,8 +2,6 @@
 
 - **Source:** sent by recruiter (Nathan Warner, Noir Consulting)
 - **Location / salary:** Manchester (hybrid), £60k - £80k + pension + benefits
-- **Applied:**
-- **CV sent:** jobs/2026-09-noir-senior-data-engineer-aws/cv.pdf (email to recruiter)
 
 ## Advert
 

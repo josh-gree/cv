@@ -25,7 +25,8 @@ question the user cannot answer is worse than a missing keyword.
    Copy `jobs/_template/` as the starting point.
 
 2. **Save the advert verbatim** in `job.md` under "Advert", with source,
-   location, salary and a blank "Applied" line.
+   location and salary. The folder documents the tailoring, nothing more;
+   it is not an application tracker.
 
 3. **Extract the terms.** From the advert list: the exact job title, every
    named tool or service, methodologies (ETL, orchestration, lakehouse, Agile),
