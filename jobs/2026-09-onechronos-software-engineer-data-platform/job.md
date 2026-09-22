@@ -43,11 +43,11 @@ Terms from the advert, checked against the base CV. Only claim what you would de
 |---|---|---|
 | Software Engineer, Data Platform | yes (Senior Software Engineer at IMU building the data platform) | headline "Senior Software Engineer, Data Platform"; "Software engineer on the data platform side" opens the summary |
 | Python, SQL | yes | first in summary and Languages row |
-| Rust | no | not claimed: no evidence |
+| Rust | no in base; confirmed by user (personal projects and simple Python integrations) | Languages row, qualified as "personal projects, Python integrations" |
 | data pipelines | yes | summary, Workflow Orchestration row |
 | workflow orchestration | yes (Dagster, Prefect, Airflow) | literal phrase in summary and as skills row name |
 | Airflow, Dagster | yes | Workflow Orchestration row (Dagster and Airflow listed first) |
-| Temporal | no (keyword check hits "temporal tagging" in the base projects, not the Temporal orchestrator) | not claimed: no evidence |
+| Temporal | no; confirmed by user (keyword check hits "temporal tagging" in the base projects, not the Temporal orchestrator) | not claimed |
 | internal tooling / internal services | yes (CI-based self-serve pipeline framework, data catalogue, JupyterHub, Flask/Django apps) | "internal tooling" in summary; Internal Services \& Tooling row |
 | large-scale data ingestion and transformation | yes (50M+ records/day, impression-level ingestion, 100k+ samples) | summary; "data ingestion and transformation" in Workflow Orchestration row |
 | ETL / data transformation processes | yes | "ETL" in summary, "ETL/ELT" in skills |
@@ -55,7 +55,7 @@ Terms from the advert, checked against the base CV. Only claim what you would de
 | real-time and historical data streams | yes (Kafka + TimescaleDB post-crisis tool, three years of historical mobile data) | literal phrase in summary and Streaming \& Real-time row |
 | time-sensitive / high-volume data processing | yes (real-time mobility tool, 50M records/day) | "high-volume" in summary |
 | columnar data formats, Parquet | yes (Parquet at IMU, Zarr) | "columnar storage on Parquet" in summary; Columnar Storage row |
-| Arrow | no literal evidence | not claimed: ask the user (Parquet work in Python usually goes through pyarrow) |
+| Arrow | no in base; confirmed by user (used many times) | Columnar Storage row |
 | optimize storage, retrieval, processing performance | yes (IMU storage architecture benchmarks, cut query times, Redshift cost cutting) | "Optimises storage, retrieval and processing performance across large datasets" in summary |
 | data modeling | yes (base skills, warehouse design) | "data modelling" in summary and Databases row (UK spelling kept) |
 | analysts and researchers | yes (analytics team at Mobkoi, immunologists at IMU, doctoral research) | "partners with analysts and researchers" in summary |
@@ -79,7 +79,3 @@ Spelling: the CV uses UK spelling ("modelling", "optimises"), so the advert's "d
 - `summary.tex` - rewritten around data pipelines, workflow orchestration, internal tooling, real-time and historical streams, columnar storage, performance optimisation, analysts and researchers, reliability and data integrity, and the entrepreneurial angle.
 - `skills.tex` - rows renamed to the advert's phrases: Workflow Orchestration, Streaming \& Real-time, Columnar Storage, Reliability \& Monitoring, Internal Services \& Tooling; Dagster and Airflow lead the orchestration row; ML row shortened and last.
 - Experience, projects and education fall back to the base files.
-
-## Questions for the user
-
-- Have you used Apache Arrow (pyarrow) directly? If so add "Arrow" to the Columnar Storage row.
