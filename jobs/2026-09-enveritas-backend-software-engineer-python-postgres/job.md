@@ -98,7 +98,7 @@ Terms from the advert, checked against the base CV. Only claim what you would de
 | deforestation detection model | no (vision models on satellite imagery, but not deforestation) | not claimed: no evidence |
 | EUDR / regulated space / compliant | no | not claimed: no evidence. Nearest: privacy-preserving aggregates at Flowminder and the data union |
 | Flask | yes (base skills) | Languages \& Backend row |
-| Django | no | not claimed: no evidence. Advert says "Django or Flask", so Flask satisfies it |
+| Django | no in base; confirmed by user (built internal apps with it) | Languages \& Backend row |
 | ingest / validate and transform inputs | yes (impression-level ingestion, 50M records/day, QC framework) | "ingest, validate and transform" in summary; "ingestion, validation and transformation" in Data Pipelines row |
 | data checks and error handling | yes (IMU QC framework, HeyJobs data quality framework) | summary and Quality \& Observability row |
 | observability | yes (DataDog, monitoring, base skills) | summary and row name |
@@ -128,7 +128,7 @@ Spelling: the CV uses UK spelling throughout ("optimisation", "containerised"), 
 
 - `overrides.tex` - headline changed to "Senior Backend Software Engineer".
 - `summary.tex` - rewritten around Python and PostgreSQL/PostGIS backend work, ingest/validate/transform, geospatial workflows and satellite imagery, data checks, error handling and observability, Terraform, containers and CI/CD on AWS, investigative problem-solving, ambiguity, mentoring, non-technical communication and the non-profit background.
-- `skills.tex` - PostgreSQL and Geospatial rows added; Bash, Linux, Flask and REST APIs promoted; Containers \& Delivery and Quality \& Observability rows named after the advert; ML row shortened and moved last.
+- `skills.tex` - PostgreSQL and Geospatial rows added; Bash, Linux, Django, Flask and REST APIs promoted; Containers \& Delivery and Quality \& Observability rows named after the advert; ML row shortened and moved last.
 - Experience, projects and education fall back to the base files.
 
 ## Questions for the user
