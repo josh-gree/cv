@@ -107,7 +107,8 @@ Terms from the advert, checked against the base CV. Only claim what you would de
 | containerized services on AWS | partial (Docker, Kubernetes, GKE; AWS services at HeyJobs, Mobkoi, IMU) | "containerised services" in summary and skills; UK spelling kept |
 | Docker containers | yes | Containers \& Delivery row |
 | AWS | yes (S3, Redshift, Glue, Lambda, EMR, CloudWatch) | Cloud row |
-| EC2, RDS, CloudFront | no literal evidence | not claimed: ask the user (see Questions) |
+| EC2, RDS | no in base; confirmed by user | Cloud row |
+| CloudFront | no (user has used Cloudflare caching, not CloudFront) | not claimed; "Cloudflare caching" in Containers \& Delivery row instead |
 | Linux, Bash scripting | partial (no literal term; Docker, Kubernetes, HPC OpenMP/MPI work all imply it) | "Bash" in Languages row and "Linux" in Containers row, claimed as everyday tooling |
 | query optimization, joins, performance tuning | yes (cut query times at IMU, Redshift cost cutting at HeyJobs, 50M records/day pipelines) | PostgreSQL row, UK spelling "optimisation" to match the rest of the CV |
 | stored procedures | no | not claimed: no evidence |
@@ -128,11 +129,10 @@ Spelling: the CV uses UK spelling throughout ("optimisation", "containerised"), 
 
 - `overrides.tex` - headline changed to "Senior Backend Software Engineer".
 - `summary.tex` - rewritten around Python and PostgreSQL/PostGIS backend work, ingest/validate/transform, geospatial workflows and satellite imagery, data checks, error handling and observability, Terraform, containers and CI/CD on AWS, investigative problem-solving, ambiguity, mentoring, non-technical communication and the non-profit background.
-- `skills.tex` - PostgreSQL and Geospatial rows added; Bash, Linux, Django, Flask and REST APIs promoted; Containers \& Delivery and Quality \& Observability rows named after the advert; ML row shortened and moved last.
+- `skills.tex` - PostgreSQL and Geospatial rows added; Bash, Linux, Django, Flask and REST APIs promoted; Containers \& Delivery (with Cloudflare caching, Agile dropped) and Quality \& Observability rows named after the advert; ML row shortened and moved last.
 - Experience, projects and education fall back to the base files.
 
 ## Questions for the user
 
-- Have you used EC2, RDS or CloudFront directly? If so they can go in the Cloud row.
 - Have you written PostgreSQL stored procedures (PL/pgSQL)? If so add "stored procedures" to the PostgreSQL row.
 - Has any Terraform work targeted AWS rather than GCP? If so the summary can say "Terraform-managed services on AWS".
